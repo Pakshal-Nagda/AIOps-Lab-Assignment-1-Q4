@@ -1,0 +1,11 @@
+name: iris-classifier
+
+python_env: python_env.yaml
+
+entry_points:
+  main:
+    parameters:
+      n_estimators: {type: int, default: 3}
+      max_depth: {type: int, default: 3}
+      data_path: {type: str, default: "data"}
+    command: "python train.py --n_estimators {n_estimators} --max_depth {max_depth} --data_path {data_path}"
